@@ -1,0 +1,26 @@
+    * {
+        font-family: 'Noto Sans KR', sans-serif;
+        list-style: none;
+        text-decoration: none;
+        border-collapse: collapse;
+        margin: auto;
+        padding: 0px;
+        color: #000;
+    }
+
+    .crypto1-1 > button {
+        width: 250px;
+        height: 280px;
+        border-radius: 10px;
+        background-color: white;
+        color: white;
+        cursor: pointer;
+        text-align: center;
+         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+         border: none;
+    }
+
+    .crypto1-1 > button > img {
+        width: 120px;
+        height: 120px;
+    }
