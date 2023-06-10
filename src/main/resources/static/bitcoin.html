@@ -9,32 +9,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
     <style>
         table {
-  border-collapse: collapse;
-  width: 40%;
-  float: left;
-}
+            border-collapse: collapse;
+            width: 40%;
+            float: left;
+        }
 
-th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
 
-
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
     </style>
 </head>
 <body>
 <div class="wrap">
-
-        <h1>Bitcoin</h1>
-    </div>
-    <div id="btc-container"></div>
-
-
+    <h1>Bitcoin</h1>
 </div>
+<div id="btc-container"></div>
+<h1>Bitcoin News</h1>
+<ul id="newsList"></ul>
+
+<script>
+    // Bitcoin 뉴스 데이터를 가져와서 동적으로 출력
+    fetch('/bitcoin/news')
+        .then(response => response.json())
+        .then(data => {
+            const newsList = document.getElementById('newsList');
+            const recentNews = data.slice(0, 3); // 최신 3개의 기사만 가져옴
+            recentNews.forEach(news => {
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = news.link;
+                link.target = '_blank';
+                link.textContent = news.title;
+                listItem.appendChild(link);
+                newsList.appendChild(listItem);
+            });
+        })
+        .catch(error => console.error(error));
+</script>
 </body>
 </html>

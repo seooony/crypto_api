@@ -4,56 +4,56 @@
     <meta charset="UTF-8">
     <title>$Title$</title>
     <script src="./script.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <div class = "wrap">
-    <div class = "header">
-      <div class = "logo">
-
-      </div>
-    </div>
-    <div class = "crypto_currency">
-      <div class = "crypto1">
-        <div class = "crypto1-1">
-          <button class = "button1">
-            <img src="./img/btc.png">
-            <h2>Bitcoin</h2>
-            <h2 id="btc-price">시세</h2>
-          </button>
-            <button class = "button2">
-                <img src="./img/ETH.png">
-                <h2>Ethereum</h2>
-                <h2 id = "eth-price">시세</h2>
-            </button>
-            <button class = "button3">
-                <img src="./img/xrp.png">
-                <h2>XRP</h2>
-                <h2 id = "xrp-price">시세</h2>
-            </button>
+<div class="wrap">
+    <div class="header">
+        <div class="logo">
+            <h1>Cryptocurrency Price</h1>
         </div>
-          <div class = "crypto1-1">
-              <button class = "button1">
-                  <img src="./img/mask.png">
-                  <h2>Mask</h2>
-                  <h2 id = "mask-price">시세</h2>
-              </button>
-              <button class = "button2">
-                  <img src="./img/trx.png">
-                  <h2>Trx</h2>
-                  <h2 id = "trx-price">시세</h2>
-              </button>
-              <button class = "button3">
-                  <img src="./img/neo.png">
-                  <h2>Neo</h2>
-                  <h2 id = "neo-price">시세</h2>
-              </button>
-          </div>
-      </div>
     </div>
-  </div>
+    <div class="crypto_currency">
+        <div class="crypto1">
+            <div class="crypto1-1">
+                <button class="button1" onclick="location.href='./bitcoin.html'";>
+                    <img src="./img/btc.png">
+                    <h2>Bitcoin</h2>
+                    <h2 id="btc-price"></h2>
+                </button>
+                <button class="button2" onclick="location.href='./eth.html'";>
+                    <img src="./img/ETH.png">
+                    <h2>Ethereum</h2>
+                    <h2 id="eth-price"></h2>
+                </button>
+                <button class="button3" onclick="location.href='./xrp.html'";>
+                    <img src="./img/xrp.png">
+                    <h2>XRP</h2>
+                    <h2 id="xrp-price"></h2>
+                </button>
+            </div>
+            <div class="crypto1-1">
+                <button class="button4" onclick="location.href='./ada.html'";>
+                    <img src="./img/ada.png">
+                    <h2>ADA</h2>
+                    <h2 id="ada-price"></h2>
+                </button>
+                <button class="button5" onclick="location.href='./doge.html'";>
+                    <img src="./img/doge.png">
+                    <h2>Doge coin</h2>
+                    <h2 id="doge-price"></h2>
+                </button>
+                <button class="button6" onclick="location.href='./solana.html'";>
+                    <img src="./img/solana.png">
+                    <h2>Solana</h2>
+                    <h2 id="solana-price"></h2>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

@@ -4,16 +4,16 @@ function createTable(market, data) {
 
   // 테이블 데이터 생성
   const rowData = [
-    { header: 'Trade Date', value: data[0].trade_date },
-    { header: 'Trade Time', value: data[0].trade_time },
-    { header: 'Trade Timestamp', value: data[0].trade_timestamp },
-    { header: 'High Price', value: addCommas(data[0].high_price) },
-    { header: 'Low Price', value: addCommas(data[0].low_price) },
-    { header: 'Trade Price', value: addCommas(data[0].trade_price) },
-    { header: 'Signed Change Price', value: addCommas(data[0].signed_change_price) + ' %'},
-    { header: 'Signed Change Rate', value: data[0].signed_change_rate },
-    { header: 'Accumulated Trade Price (24H)', value: addCommas(data[0].acc_trade_price_24h) },
-    { header: 'Accumulated Trade Volume (24H)', value: addCommas(data[0].acc_trade_volume_24h) },
+    { header: '최근 거래 일자(UTC)', value: data[0].trade_date },
+    { header: '최근 거래 시각(UTC)', value: data[0].trade_time },
+    { header: '최근 거래 일시(UTC)', value: data[0].trade_timestamp },
+    { header: '고가', value: addCommas(data[0].high_price) },
+    { header: '저가', value: addCommas(data[0].low_price) },
+    { header: '종가', value: addCommas(data[0].trade_price) },
+    { header: '부호가 있는 변화액', value: addCommas(data[0].signed_change_price) },
+    { header: '부호가 있는 변화율', value: data[0].signed_change_rate  + ' %'},
+    { header: '24시간 누적 거래대금', value: addCommas(data[0].acc_trade_price_24h) },
+    { header: '24시간 누적 거래량', value: addCommas(data[0].acc_trade_volume_24h) },
   ];
 
   rowData.forEach(rowDataItem => {
